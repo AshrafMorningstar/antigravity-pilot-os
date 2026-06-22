@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>OmniPilot OS — Autonomous AI Agent Engine & Multi-IDE Studio</title>
+  <meta name="title" content="OmniPilot OS — Autonomous AI Agent Engine & Multi-IDE Studio">
+  <meta name="description" content="Deterministic autonomous AI agent operating system. Auto-generates PRD, Architecture, Security, Design, and Phases documents, token-saving recovery checkpoints, and publishes to GitHub with a single click. Compatible with Cursor, VS Code, Antigravity, and all major IDEs across Windows, Mac, and Linux.">
+  <meta name="keywords" content="autonomous ai agent, blast protocol, cursor ide rules, vs code tasks, token saving recovery, software architecture generator, prd generator, github one click publish, antigravity pilot">
+  <meta name="author" content="OmniPilot Systems">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:8765/">
+  <meta property="og:title" content="OmniPilot OS — Autonomous AI Agent Engine">
+  <meta property="og:description" content="Single-click autonomous software scaffolding, 9-document architecture suite, token-saving AI recovery files, and automatic GitHub publisher.">
+  <meta property="og:image" content="/icons/og-preview.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="http://localhost:8765/">
+  <meta property="twitter:title" content="OmniPilot OS — Autonomous AI Agent Engine">
+  <meta property="twitter:description" content="Single-click autonomous software scaffolding, 9-document architecture suite, token-saving AI recovery files, and automatic GitHub publisher.">
+  
+  <!-- PWA & App Store Discovery -->
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0c0d0e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <!-- Schema.org Structured Data for Search Engines & App Stores -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "OmniPilot OS",
+    "url": "http://localhost:8765",
+    "description": "Deterministic autonomous AI agent operating system, token-saving checkpoint engine, and multi-IDE 9-core document studio.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Windows, macOS, Linux",
+    "softwareVersion": "1.1.0",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "1-Click Full Autonomous Execution",
+      "Standard 9 Core Project Documents Generation",
+      "Token-Saving Fast Resume Checkpoint (FAST_RESUME.md)",
+      "Universal IDE Setup: Cursor, VS Code, Antigravity, Windsurf",
+      "Master Codebase Index & Symbol Map (INDEX.md)",
+      "Single-Click Git & GitHub Auto-Publisher",
+      "Realistic Minimalist UI Design Standard"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+  <!-- Top Global Navigation Bar -->
+  <header class="top-nav" id="topNav">
+    <div class="nav-left">
+      <div class="brand-badge">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <span class="brand-name">OMNIPILOT <span class="brand-sub">OS v1.1</span></span>
+      </div>
+      <div class="status-indicator">
+        <span class="pulse-dot"></span>
+        <span class="status-text" id="engineStatus">100% Autonomous — Zero Permission Mode</span>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <button class="btn btn-secondary" id="btnIdeSelect" title="Select IDE Configuration">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        <span class="btn-label" id="currentIdeLabel">IDE: Multi</span>
+      </button>
+
+      <button class="btn btn-secondary" id="btnThemeToggle" title="Toggle Dark/Light Mode">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <span class="btn-label">Theme</span>
+      </button>
+
+      <button class="btn btn-primary" id="btnOneClickRun">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <span>1-Click Full Autonomy</span>
+      </button>
+
+      <button class="btn btn-accent" id="btnOneClickGit">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+        <span>Sync to GitHub</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Metrics & System Bar -->
+  <section class="metrics-bar" id="metricsBar">
+    <div class="metric-card">
+      <div class="metric-label">9-CORE DOCS & RECOVERY</div>
+      <div class="metric-value text-success" id="metricDocs">12 / 12 Files Synced</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">GIT REPO STATUS</div>
+      <div class="metric-value text-success" id="metricGit">Branch: main (Clean)</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">TOKEN CONSERVATION</div>
+      <div class="metric-value text-blue" id="metricTokens">Saving ~8,500 Tokens/Run</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">CROSS-PLATFORM OS</div>
+      <div class="metric-value text-success" id="metricOs">Windows • Mac • Linux</div>
+    </div>
+  </section>
+
+  <!-- Main Workspace Layout -->
+  <main class="workspace-container">
+    <!-- Left Sidebar: Project Config & Fast Triggers -->
+    <aside class="sidebar-panel">
+      <div class="panel-header">
+        <h2 class="panel-title">Autonomous Mission Control</h2>
+      </div>
+
+      <div class="form-group">
+        <label for="inputProjectName" class="form-label">Project Title</label>
+        <input type="text" id="inputProjectName" class="form-input" value="OmniPilot OS">
+      </div>
+
+      <div class="form-group">
+        <label for="inputVision" class="form-label">North Star Vision</label>
+        <textarea id="inputVision" class="form-textarea" rows="3">Deterministic, 100% autonomous software development operating system with automated 9-document architecture, token-saving recovery, and 1-click GitHub publishing.</textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Active Skills</label>
+        <div class="skill-tag-list">
+          <span class="skill-tag">installing-skills</span>
+          <span class="skill-tag">antigravity-skill-creator</span>
+          <span class="skill-tag">autonomous-architect</span>
+          <span class="skill-tag">proven-libraries</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="actions-stack">
+        <button class="btn btn-full btn-secondary" id="btnRefreshDocs">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+          </svg>
+          Reload All Files
+        </button>
+        <button class="btn btn-full btn-secondary" id="btnDiagnose">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+          Run Self-Annealing Diagnostics
+        </button>
+        <button class="btn btn-full btn-secondary" id="btnFastResumeTrigger">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          Fast Resume Checkpoint
+        </button>
+        <button class="btn btn-full btn-secondary" id="btnSeoInspect">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          Search Engine Preview
+        </button>
+      </div>
+
+      <div class="diagnostic-box" id="diagnosticBox">
+        <div class="diagnostic-title">Engine Output</div>
+        <pre class="diagnostic-content" id="logOutput">System active in 100% autonomous mode.
+Token optimization active: INDEX.md & FAST_RESUME.md loaded.
+Universal IDE configurations ready.</pre>
+      </div>
+    </aside>
+
+    <!-- Center Workspace: 9-Core Document Studio -->
+    <section class="editor-panel">
+      <!-- Tabs Bar -->
+      <nav class="tabs-nav" id="docTabs" role="tablist">
+        <!-- AI Token-Saving Files -->
+        <button class="tab-btn active" data-doc="fast_resume" role="tab">⚡ FAST_RESUME.md</button>
+        <button class="tab-btn" data-doc="index_map" role="tab">🗺️ INDEX.md</button>
+        <button class="tab-btn" data-doc="human_brief" role="tab">👤 HUMAN_BRIEF.md</button>
+        <!-- 9 Core Documents -->
+        <button class="tab-btn" data-doc="prd" role="tab">01 PRD</button>
+        <button class="tab-btn" data-doc="architecture" role="tab">02 Architecture</button>
+        <button class="tab-btn" data-doc="security" role="tab">03 Security</button>
+        <button class="tab-btn" data-doc="design" role="tab">04 Design</button>
+        <button class="tab-btn" data-doc="phases" role="tab">05 Phases</button>
+        <button class="tab-btn" data-doc="flow" role="tab">06 Flow</button>
+        <button class="tab-btn" data-doc="rules" role="tab">07 Rules</button>
+        <button class="tab-btn" data-doc="decision" role="tab">08 Decision</button>
+        <button class="tab-btn" data-doc="memory" role="tab">09 Memory</button>
+      </nav>
+
+      <!-- Document Display & Editor Container -->
+      <div class="doc-container">
+        <div class="doc-header">
+          <div class="doc-info">
+            <h1 class="doc-title" id="currentDocTitle">FAST_RESUME.md — AI Agent Context Restoration</h1>
+            <span class="doc-badge" id="currentDocBadge">AI Crash & Quota Snapshot</span>
+          </div>
+          <div class="doc-actions">
+            <button class="btn btn-sm btn-secondary" id="btnCopyDoc">Copy Markdown</button>
+            <button class="btn btn-sm btn-secondary" id="btnSaveDoc">Save Changes</button>
+          </div>
+        </div>
+
+        <div class="editor-wrap">
+          <textarea id="docContent" class="doc-textarea" spellcheck="false"></textarea>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- IDE Configuration Modal -->
+  <div class="modal-overlay" id="ideModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Select IDE & Export Native Configuration</h3>
+        <button class="modal-close" id="btnCloseIdeModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">Generate and apply native rules and settings for your preferred development environment:</p>
+        
+        <div class="ide-grid">
+          <div class="ide-card selected" data-ide="all">
+            <div class="ide-title">Universal / All IDEs</div>
+            <div class="ide-desc">Applies configs for Cursor, VS Code, Antigravity, and EditorConfig simultaneously.</div>
+          </div>
+          <div class="ide-card" data-ide="cursor">
+            <div class="ide-title">Cursor IDE</div>
+            <div class="ide-desc">Generates <code>.cursorrules</code> with zero-permission autonomy & token saving directives.</div>
+          </div>
+          <div class="ide-card" data-ide="vscode">
+            <div class="ide-title">Visual Studio Code</div>
+            <div class="ide-desc">Generates <code>.vscode/settings.json</code>, <code>tasks.json</code>, and recommended extensions.</div>
+          </div>
+          <div class="ide-card" data-ide="antigravity">
+            <div class="ide-title">Antigravity / Gemini</div>
+            <div class="ide-desc">Native B.L.A.S.T. constitution in <code>GEMINI.md</code> and auto-loaded global skills.</div>
+          </div>
+        </div>
+
+        <div class="action-row" style="margin-top: 16px;">
+          <button class="btn btn-primary" id="btnApplyIdeConfig">1-Click Apply IDE Config</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GitHub Setup Modal / Drawer -->
+  <div class="modal-overlay" id="gitModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Publish & Sync with GitHub</h3>
+        <button class="modal-close" id="btnCloseGitModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">Execute an automatic local Git commit and connect your remote repository with a single click.</p>
+        
+        <div class="form-group">
+          <label class="form-label">Commit Message</label>
+          <input type="text" id="inputCommitMsg" class="form-input" value="feat(omnipilot): add token-saving recovery, multi-ide support, and cross-platform runners">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Remote GitHub URL (Optional for auto-push)</label>
+          <input type="text" id="inputGitRemote" class="form-input" placeholder="https://github.com/username/omnipilot.git">
+        </div>
+
+        <div class="action-row">
+          <button class="btn btn-primary" id="btnExecuteGitCommit">1-Click Local Commit</button>
+          <button class="btn btn-secondary" id="btnExecuteGitPush">Push to GitHub</button>
+        </div>
+
+        <div class="cli-box">
+          <div class="cli-label">Direct CLI Commands (Auto-generated)</div>
+          <pre class="cli-code" id="gitCliCode">git add .
+git commit -m "feat(omnipilot): add token-saving recovery, multi-ide support, and cross-platform runners"
+git branch -M main
+git remote add origin &lt;your-repo-url&gt;
+git push -u origin main</pre>
+          <button class="btn btn-sm btn-secondary" id="btnCopyCli">Copy CLI Commands</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Engine & Store Preview Modal -->
+  <div class="modal-overlay" id="seoModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Search Engine & Store Discoverability</h3>
+        <button class="modal-close" id="btnCloseSeoModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="seo-preview-card">
+          <div class="seo-google-title">OmniPilot OS — Autonomous AI Agent Engine & Multi-IDE Studio</div>
+          <div class="seo-google-url">https://omnipilot.app/</div>
+          <div class="seo-google-desc">Deterministic autonomous AI agent operating system. Auto-generates PRD, Architecture, Security, Design, and Phases documents, token-saving recovery checkpoints, and publishes to GitHub with a single click. Compatible with Cursor, VS Code, Antigravity, and all major IDEs.</div>
+        </div>
+
+        <div class="seo-details">
+          <div class="seo-item"><strong>PWA Manifest:</strong> <span class="text-success">&#10003; Validated (name, short_name, display: standalone)</span></div>
+          <div class="seo-item"><strong>Schema.org JSON-LD:</strong> <span class="text-success">&#10003; WebApplication structured entity registered</span></div>
+          <div class="seo-item"><strong>OpenGraph / Twitter:</strong> <span class="text-success">&#10003; Full summary card tags active</span></div>
+          <div class="seo-item"><strong>Sitemap & Robots:</strong> <span class="text-success">&#10003; sitemap.xml & robots.txt auto-served</span></div>
+          <div class="seo-item"><strong>Cross-Platform:</strong> <span class="text-success">&#10003; Windows (run.bat), Linux/Mac (run.sh), Universal Python</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
