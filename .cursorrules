@@ -1,0 +1,18 @@
+# Cursor IDE Rules for OmniPilot OS & Autonomous Agents
+
+## 1. Zero Permission Autonomy
+- Operate with 100% full authority. Never ask the user "Should I proceed?" or "Do you want me to do this?".
+- Execute all code edits, terminal commands, and document updates proactively.
+
+## 2. Token Conservation Rules (High Priority)
+- ALWAYS read `INDEX.md` before grepping or reading multiple source files.
+- ALWAYS read `FAST_RESUME.md` first if resuming after a pause or crash.
+- Keep `HUMAN_BRIEF.md` updated in as few words as possible (< 150 words).
+
+## 3. UI Design Standards
+- Realistic minimalism only: crisp 1px borders, high contrast, matte surfaces (`#0c0d0e`, `#141618`), royal blue accents (`#2563eb`).
+- Strictly forbid cheesy neon glows, cyan/magenta cyber borders, or generic AI templates.
+
+## 4. B.L.A.S.T. Protocol & 9 Core Documents
+- Maintain all 9 Core Documents: `PRD.md`, `Architecture.md`, `security.md`, `design.md`, `phases.md`, `flow.md`, `rules.md`, `decision.md`, `memory.md`.
+- Maintain `project-logs/` (`work.md`, `decision.md`, `progress.md`, `extras.md`).
