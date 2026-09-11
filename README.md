@@ -141,9 +141,6 @@ A: Works out of the box with Google Antigravity, Cursor, VS Code, Windsurf, JetB
 ---
 <div align="center">
   <img src="https://media.giphy.com/media/xT9IgvEOwRzUcZDRiU/giphy.gif" width="100%" height="200" alt="Horror Banner">
-  <h1>🩸 SACHIKA HARVESTER 🩸</h1>
-  <h3>The Most Terrifyingly Agile LinkedIn Mass-Connection Protocol Ever Unleashed.</h3>
-  <p><i>They won't see you coming. But you will harvest them all.</i></p>
 </div>
 
 ---
