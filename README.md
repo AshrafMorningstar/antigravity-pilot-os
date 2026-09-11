@@ -139,6 +139,13 @@ A: Works out of the box with Google Antigravity, Cursor, VS Code, Windsurf, JetB
 *This is an independent open-source community tool created for developers building with the Google Antigravity AI assistant and modern coding agents. It is not affiliated with, sponsored by, or endorsed by Google LLC. 'Google' and 'Antigravity' are trademarks of their respective owners.*
 
 ---
+<div align="center">
+  <img src="https://media.giphy.com/media/xT9IgvEOwRzUcZDRiU/giphy.gif" width="100%" height="200" alt="Horror Banner">
+  <h1>🩸 SACHIKA HARVESTER 🩸</h1>
+  <h3>The Most Terrifyingly Agile LinkedIn Mass-Connection Protocol Ever Unleashed.</h3>
+  <p><i>They won't see you coming. But you will harvest them all.</i></p>
+</div>
 
+---
 ### License
 MIT License. Feel free to fork, adapt, and use it in your own projects!
