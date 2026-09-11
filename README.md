@@ -9,12 +9,12 @@
 ---
 
 ### What's New in Version 10.0 (Milestone Release)
-- 🚀 **100% Zero-Permission Execution Engine**: AI agents operate with full authority—no more repetitive permission popups.
-- ⚡ **Token-Saving Recovery Layer**: `FAST_RESUME.md` (< 250 tokens) and `INDEX.md` (< 400 tokens) eliminate context burn and search waste.
-- 📑 **The 9 Standardized Core Project Docs**: Automatic scaffolding of PRD, Architecture, Security, Design, Phases, Flow, Rules, Decisions, and Memory.
-- 💻 **Universal IDE Support**: Native integration for Google Antigravity, Cursor (`.cursorrules`), and VS Code (`.vscode/`).
-- 🎨 **Realistic Minimalist UI**: High-contrast, clean developer workspace—strictly zero gaudy neon glows.
-- 🌍 **Universal Cross-Platform**: Native 1-click execution for Windows (`run.bat`), Linux, and macOS (`run.sh`).
+- **100% Zero-Permission Execution Engine**: AI agents operate with full authority—no more repetitive permission popups.
+-  **Token-Saving Recovery Layer**: `FAST_RESUME.md` (< 250 tokens) and `INDEX.md` (< 400 tokens) eliminate context burn and search waste.
+-  **The 9 Standardized Core Project Docs**: Automatic scaffolding of PRD, Architecture, Security, Design, Phases, Flow, Rules, Decisions, and Memory.
+-  **Universal IDE Support**: Native integration for Google Antigravity, Cursor (`.cursorrules`), and VS Code (`.vscode/`).
+-  **Realistic Minimalist UI**: High-contrast, clean developer workspace—strictly zero gaudy neon glows.
+-  **Universal Cross-Platform**: Native 1-click execution for Windows (`run.bat`), Linux, and macOS (`run.sh`).
 
 ---
 
