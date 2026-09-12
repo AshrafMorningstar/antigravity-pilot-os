@@ -24,9 +24,9 @@ class OmniPilotHandler(http.server.SimpleHTTPRequestHandler):
         if parsed.path == '/api/status':
             self._send_json(200, {
                 'status': 'ok',
-                'engine': 'OmniPilot OS',
+                'engine': 'Antigravity Pilot OS',
                 'autonomy': '100% Zero-Permission',
-                'version': '1.0.0'
+                'version': '10.0.0'
             })
         elif parsed.path == '/api/git-status':
             self._handle_git_status()

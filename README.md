@@ -1,10 +1,20 @@
-# Antigravity Pilot OS `v9.7.4`
+# Antigravity Pilot OS `v10.0.0`
 > A lightweight, zero-permission autonomous companion for Google Antigravity, Cursor, and AI-driven development.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version: 9.7.4](https://img.shields.io/badge/Release-v9.7.4-green.svg)](https://github.com/AshrafMorningstar/antigravity-pilot-os/releases)
+[![Version: 10.0.0](https://img.shields.io/badge/Release-v10.0.0-brightgreen.svg)](https://github.com/AshrafMorningstar/antigravity-pilot-os/releases)
 [![Python: 3.9+](https://img.shields.io/badge/Python-3.9+-brightgreen.svg)](https://python.org)
 [![Platform: Win | Mac | Linux](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](run.sh)
+
+---
+
+### What's New in Version 10.0 (Milestone Release)
+- 🚀 **100% Zero-Permission Execution Engine**: AI agents operate with full authority—no more repetitive permission popups.
+- ⚡ **Token-Saving Recovery Layer**: `FAST_RESUME.md` (< 250 tokens) and `INDEX.md` (< 400 tokens) eliminate context burn and search waste.
+- 📑 **The 9 Standardized Core Project Docs**: Automatic scaffolding of PRD, Architecture, Security, Design, Phases, Flow, Rules, Decisions, and Memory.
+- 💻 **Universal IDE Support**: Native integration for Google Antigravity, Cursor (`.cursorrules`), and VS Code (`.vscode/`).
+- 🎨 **Realistic Minimalist UI**: High-contrast, clean developer workspace—strictly zero gaudy neon glows.
+- 🌍 **Universal Cross-Platform**: Native 1-click execution for Windows (`run.bat`), Linux, and macOS (`run.sh`).
 
 ---
 
