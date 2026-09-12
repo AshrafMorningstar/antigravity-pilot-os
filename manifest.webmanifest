@@ -1,0 +1,22 @@
+{
+  "name": "OmniPilot OS — Autonomous AI Agent Engine",
+  "short_name": "OmniPilot",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0d0e",
+  "theme_color": "#0c0d0e",
+  "description": "Deterministic 100% autonomous software development engine with 9-document architecture and single-click GitHub publishing.",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["developer-tools", "productivity", "utilities"]
+}
